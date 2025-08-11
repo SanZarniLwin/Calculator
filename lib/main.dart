@@ -34,7 +34,7 @@ class _CalculatorState extends State<Calculator> {
     setState(() {
       double secondOperand = double.tryParse(displayText) ?? 0;
       double result = 0;
-      
+
       switch (selectedOperator) {
         case '+':
           result = firstOperand + secondOperand;
@@ -56,7 +56,7 @@ class _CalculatorState extends State<Calculator> {
         default:
           result = 0;
       }
-      
+
       displayText = result.toString();
     });
   }
@@ -99,46 +99,61 @@ class _CalculatorState extends State<Calculator> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(onPressed: () => onNumberPressed('1'), child: Text('1')),
-                ElevatedButton(onPressed: () => onNumberPressed('2'), child: Text('2')),
-                ElevatedButton(onPressed: () => onNumberPressed('3'), child: Text('3')),
-                ElevatedButton(onPressed: () => onOperatorPressed('+'), child: Text('+')),
+                ElevatedButton(
+                    onPressed: () => onNumberPressed('1'), child: Text('1')),
+                ElevatedButton(
+                    onPressed: () => onNumberPressed('2'), child: Text('2')),
+                ElevatedButton(
+                    onPressed: () => onNumberPressed('3'), child: Text('3')),
+                ElevatedButton(
+                    onPressed: () => onOperatorPressed('+'), child: Text('+')),
               ],
             ),
-
-            SizedBox(height: 20,),
-
+            SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(onPressed: () => onNumberPressed('4'), child: Text('4')),
-                ElevatedButton(onPressed: () => onNumberPressed('5'), child: Text('5')),
-                ElevatedButton(onPressed: () => onNumberPressed('6'), child: Text('6')),
-                ElevatedButton(onPressed: () => onOperatorPressed('-'), child: Text('-')),
+                ElevatedButton(
+                    onPressed: () => onNumberPressed('4'), child: Text('4')),
+                ElevatedButton(
+                    onPressed: () => onNumberPressed('5'), child: Text('5')),
+                ElevatedButton(
+                    onPressed: () => onNumberPressed('6'), child: Text('6')),
+                ElevatedButton(
+                    onPressed: () => onOperatorPressed('-'), child: Text('-')),
               ],
             ),
-
-            SizedBox(height: 20,),
-
+            SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(onPressed: () => onNumberPressed('7'), child: Text('7')),
-                ElevatedButton(onPressed: () => onNumberPressed('8'), child: Text('8')),
-                ElevatedButton(onPressed: () => onNumberPressed('9'), child: Text('9')),
-                ElevatedButton(onPressed: () => onOperatorPressed('x'), child: Text('x')),
+                ElevatedButton(
+                    onPressed: () => onNumberPressed('7'), child: Text('7')),
+                ElevatedButton(
+                    onPressed: () => onNumberPressed('8'), child: Text('8')),
+                ElevatedButton(
+                    onPressed: () => onNumberPressed('9'), child: Text('9')),
+                ElevatedButton(
+                    onPressed: () => onOperatorPressed('x'), child: Text('x')),
               ],
             ),
-
-            SizedBox(height: 20,),
-
+            SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(onPressed: () => onNumberPressed('0'), child: Text('0')),
-                ElevatedButton(onPressed: () => onOperatorPressed('/'), child: Text('/')),
+                ElevatedButton(
+                    onPressed: () => onNumberPressed('0'), child: Text('0')),
+                ElevatedButton(
+                    onPressed: () => onOperatorPressed('/'), child: Text('/')),
                 ElevatedButton(onPressed: clearAll, child: const Text('C')),
-                ElevatedButton(onPressed: calculateResult, child: const Text('=')),
+                ElevatedButton(
+                    onPressed: calculateResult, child: const Text('=')),
               ],
             ),
           ],
@@ -147,3 +162,5 @@ class _CalculatorState extends State<Calculator> {
     );
   }
 }
+// Change result to be more visible, add visual clues
+// change buttons to be bigger and add padding at the bottom.
